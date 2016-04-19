@@ -28,6 +28,7 @@ type SoftLayer_Hardware struct {
 	ProvisionDate         *time.Time `json:"provisionDate"`
 	GlobalIdentifier      string     `json:"globalIdentifier"`
 	PrimaryIpAddress      string     `json:"primaryIpAddress"`
+	Datacenter        *SoftLayer_Location `json:"datacenter"`
 
 	OperatingSystem *SoftLayer_Operating_System `json:"operatingSystem"`
 }

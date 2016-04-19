@@ -74,6 +74,9 @@ func (slhs *softLayer_Hardware_Service) GetObject(id string) (datatypes.SoftLaye
 		"primaryIpAddress",
 		"operatingSystem.passwords.password",
 		"operatingSystem.passwords.username",
+ 		"datacenter.name",
+		"datacenter.longName",
+		"datacenter.id",
 	}
 
 	response, errorCode, err := slhs.client.GetHttpClient().DoRawHttpRequestWithObjectMask(fmt.Sprintf("%s/%s.json", slhs.GetName(), id), objectMask, "GET", new(bytes.Buffer))
